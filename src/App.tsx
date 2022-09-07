@@ -1,12 +1,7 @@
 function App() {
   return (
     <div>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        className="input-name"
-      />
+      <h1>Hello world!</h1>
     </div>
   );
 }
