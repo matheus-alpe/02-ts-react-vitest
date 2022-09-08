@@ -17,9 +17,15 @@ describe('App', () => {
 
   it('Renders not found if invalid path', () => {
     render(
-      <MemoryRouter initialEntries={['/bananas']}>
+      <MemoryRouter initialEntries={['/route-not-exist']}>
         <App />
       </MemoryRouter>
     );
+
+    expect(
+      screen.getByRole('heading', {
+        level: 1,
+      })
+    ).toHaveTextContent('Not found');
   });
 });
